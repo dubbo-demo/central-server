@@ -6,10 +6,10 @@
          version="2.5">
     <display-name>central-server</display-name>
 
-    <!--<context-param>-->
-    <!--<param-name>webAppRootKey</param-name>-->
-    <!--<param-value>central-server.root</param-value>-->
-    <!--</context-param>-->
+    <context-param>
+        <param-name>webAppRootKey</param-name>
+        <param-value>central-server.root</param-value>
+    </context-param>
 
     <!-- 添加日志监听器 -->
     <context-param>
