@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!--定义dubbo provider的基本配置信息-->
-    <dubbo:application name="way-central" />
+    <dubbo:application name="way-central"/>
 
     <!-- 注册位置 -->
-    <dubbo:registry address="${dubbo_registry_address}" />
+    <dubbo:registry address="${dubbo_registry_address}"/>
 
     <!-- 用dubbo协议在20880端口暴露服务 -->
     <dubbo:protocol name="dubbo" port="20880"/>
@@ -19,6 +19,6 @@
     <import resource="classpath*:**/spring/provider/dubbo-*-provider.xml"/>
 
     <!-- 增加dubbo监控 -->
-    <dubbo:monitor protocol="registry" />
+    <dubbo:monitor protocol="registry"/>
 
 </beans>
