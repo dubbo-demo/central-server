@@ -28,9 +28,9 @@
         </param-value>
     </context-param>
 
-    <!--<listener>-->
-    <!--<listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>-->
-    <!--</listener>-->
+    <listener>
+        <listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>
+    </listener>
 
     <listener>
         <listener-class>com.alibaba.dubbo.remoting.http.servlet.BootstrapListener</listener-class>
