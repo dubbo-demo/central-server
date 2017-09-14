@@ -50,14 +50,14 @@
         <property name="mapperLocations" value="classpath*:/mybatis/mapper/**/*.xml"/>
     </bean>
 
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+        <constructor-arg index="0" ref="sqlSessionFactory"/>
+    </bean>
+
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.way.**.dao"/>
         <property name="markerInterface" value="com.way.common.rom.IBaseMapper"/>
-    </bean>
-
-    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate"
-          destroy-method="clearCache">
-        <constructor-arg index="0" ref="sqlSessionFactory"/>
+        <property name="sqlSessionTemplateBeanName" value="sqlSessionTemplate"/>
     </bean>
 
     <bean id="transactionManager"

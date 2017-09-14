@@ -15,9 +15,10 @@
 		<setting name="defaultStatementTimeout" value="25000" />
 	</settings>
 
-	<typeAliases>
-		<package name="com.way.**.entity" />
-	</typeAliases>
+	<!-- 别名 -->
+	<!--<typeAliases>-->
+		<!--<package name="com.way.**.entity" />-->
+	<!--</typeAliases>-->
 
 	<plugins>
 		<plugin
@@ -26,4 +27,6 @@
 				value="com.way.common.rom.interceptor.dialect.MySQLDialect" />
 		</plugin>
 	</plugins>
+
+
 </configuration>
