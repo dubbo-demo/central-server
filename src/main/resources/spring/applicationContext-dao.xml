@@ -56,7 +56,7 @@
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.way.**.dao"/>
-        <property name="markerInterface" value="com.way.common.rom.IBaseMapper"/>
+        <!--<property name="markerInterface" value="com.way.common.rom.IBaseMapper"/>-->
         <property name="sqlSessionTemplateBeanName" value="sqlSessionTemplate"/>
     </bean>
 
